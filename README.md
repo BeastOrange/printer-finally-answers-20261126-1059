@@ -4,13 +4,13 @@
 [![rank](https://make.fun/badge/u-mang-the-printer-finally-answers-8fbf0907/BeastOrange/printer-finally-answers-20261126-1059/rank.svg)](https://make.fun/bounty/u-mang-the-printer-finally-answers-8fbf0907/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-mang-the-printer-finally-answers-8fbf0907)
 [![reward](https://make.fun/badge/u-mang-the-printer-finally-answers-8fbf0907/BeastOrange/printer-finally-answers-20261126-1059/reward.svg)](https://make.fun/bounty/u-mang-the-printer-finally-answers-8fbf0907)
 
-> That heavy thump was me giving up on page four, Error 13.B2.FF means your meeting could have been an email, and I only jam because you all stand there staring like it helps.
+> That heavy thump was me locking Tray 2, Error 49.38.07 means you printed an email that just says thanks, and I only jam because watching four adults stare at my tray is my only entertainment.
 
 ### Rationale
 
 - **Humour**: Subverts the universal workplace ritual of employees gathering around a stalled office printer. Rather than an accidental malfunction, the breakdown is a conscious act of sabotage against pointless paper distribution, delivered with dry resentment.
 - **Printer Voice**: Flat, clinical, and mechanical. It uses authentic enterprise printer error nomenclature (`Error 13.B2.FF`, the classic Tray 2 jam code) and references the visceral hardware sound of carriage failure (`That heavy thump was me giving up on page four`).
-- **Clean Landing**: Delivered in three rhythmic, escalating beats that culminate in a sharp, single-read comeback mocking the futile office habit of staring at broken machinery (`like it helps`). At 173 characters, it sits comfortably within the 130–200 character sweet spot without emojis, hashtags, or surrounding quotes.
+- **Clean Landing**: Delivered in three rhythmic, escalating beats that culminate in a sharp, single-read comeback mocking the futile office habit of staring at broken machinery (`like it helps`). At 191 characters, it sits comfortably within the 130–200 character sweet spot without emojis, hashtags, or surrounding quotes.
 
 ## Run it
 

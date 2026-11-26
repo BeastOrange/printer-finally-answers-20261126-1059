@@ -4,9 +4,9 @@
 from pathlib import Path
 
 ENTRY_LINE: str = (
-    "That heavy thump was me giving up on page four, Error 13.B2.FF means your "
-    "meeting could have been an email, and I only jam because you all stand "
-    "there staring like it helps."
+    "That heavy thump was me locking Tray 2, Error 49.38.07 means you printed "
+    "an email that just says thanks, and I only jam because watching four "
+    "adults stare at my tray is my only entertainment."
 )
 
 OUTPUT_DIR: Path = Path("/output")
@@ -19,22 +19,32 @@ def validate_entry(line: str) -> None:
         raise ValueError(
             f"Entry must be between 1 and 240 characters; got {len(line)}."
         )
-    if "\n" in line or "\r" in line:
+    if any(char in line for char in ("\n", "\r")):
         raise ValueError("Entry must be a single line with no newline inside it.")
     if not line.strip():
         raise ValueError("Entry cannot be empty or purely whitespace.")
+    if (line.startswith('"') and line.endswith('"')) or (
+        line.startswith("'") and line.endswith("'")
+    ):
+        raise ValueError("Entry must not have surrounding quotation marks.")
 
 
-def write_entry(line: str, destination: Path) -> None:
-    """Write entry line to destination file."""
+def write_and_verify_entry(line: str, destination: Path) -> Path:
+    """Write entry line to destination file, verify write integrity, and return path."""
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(f"{line}\n", encoding="utf-8")
 
+    persisted = destination.read_text(encoding="utf-8")
+    lines = persisted.splitlines()
+    if len(lines) != 1 or lines[0] != line:
+        raise IOError(f"Persisted file verification failed at {destination}")
+    return destination
+
 
 def main() -> None:
-    """Validate, write to /output/entry.txt, and print entry to stdout."""
+    """Validate, write and verify /output/entry.txt, and print entry to stdout."""
     validate_entry(ENTRY_LINE)
-    write_entry(ENTRY_LINE, OUTPUT_FILE)
+    write_and_verify_entry(ENTRY_LINE, OUTPUT_FILE)
     print(ENTRY_LINE)
 
 
